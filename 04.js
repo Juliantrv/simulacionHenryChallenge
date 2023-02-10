@@ -13,7 +13,24 @@ function numeroSimetrico(num) {
   // numeroSimetrico(11711) devuelve true
 
   // Tu código:
+  function rever(string){
+    var stringOld = string.split('')
+    var nuevaPalabra = []
+  
+    for(var i in stringOld){
+      nuevaPalabra.unshift(stringOld[i])
+    }
+    return nuevaPalabra.join('') 
+  }
 
+  var capicua = parseInt(rever(num.toString()),10)
+
+  if(capicua === num){
+    return true
+  }
+  else{
+    return false
+  }
 }
 
 // No modifiques nada debajo de esta linea //
